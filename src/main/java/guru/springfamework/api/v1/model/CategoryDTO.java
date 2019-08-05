@@ -1,9 +1,15 @@
 package guru.springfamework.api.v1.model;
 
-/**
- * Created by jt on 9/24/17.
- */
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
+
+@Data
 public class CategoryDTO {
     private Long id;
     private String name;
+
+    @JsonProperty("product_url")
+    private String productUrl;
+
+
 }

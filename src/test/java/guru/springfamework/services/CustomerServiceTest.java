@@ -16,8 +16,8 @@ import static org.mockito.Mockito.*;
 
 
 public class CustomerServiceTest {
-    public static final String CUSTOMER_URL = "/api/v1/customer/1";
-    public static final String CUSTOMER_FIRST_NAME = "Mitko";
+    private static final String CUSTOMER_URL = "/api/v1/customer/1";
+    private static final String CUSTOMER_FIRST_NAME = "Mitko";
     private List<Customer> customers;
     private CustomerService customerService;
     private CustomerDTO customerDTO;
@@ -64,16 +64,16 @@ public class CustomerServiceTest {
 
     @Test
     public void saveCustomerByDTO() {
-        Customer savedCustomer = new Customer();
-        savedCustomer.setFirstName(customerDTO.getFirstName());
-        savedCustomer.setLastName(customerDTO.getLastName());
-        savedCustomer.setId(1L);
+        Customer customer = new Customer();
+        customer.setFirstName(customerDTO.getFirstName());
+        customer.setLastName(customerDTO.getLastName());
+        customer.setId(1L);
 
-        when(this.customerRepository.save(any(Customer.class))).thenReturn(savedCustomer);
+        when(this.customerRepository.save(any(Customer.class))).thenReturn(customer);
 
         CustomerDTO savedDTO = this.customerService.saveCustomerByDTO(1L, customerDTO);
 
-        assertEquals(customerDTO.getFirstName(), savedCustomer.getFirstName());
+        assertEquals(customerDTO.getFirstName(), customer.getFirstName());
         assertEquals(CUSTOMER_URL, savedDTO.getCustomerUrl());
 
     }

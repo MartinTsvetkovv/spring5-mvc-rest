@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-//@Data
-//@NoArgsConstructor
-//@AllArgsConstructor
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class CustomerDTO {
 
     @JsonProperty("firstname")
@@ -21,27 +21,4 @@ public class CustomerDTO {
     private String customerUrl;
 
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getCustomerUrl() {
-        return customerUrl;
-    }
-
-    public void setCustomerUrl(String customerUrl) {
-        this.customerUrl = customerUrl;
-    }
 }

@@ -66,7 +66,7 @@ public class CustomerControllerTest extends AbstractRestControllerTest {
     public void getCustomerById() throws Exception {
         CustomerDTO customer = new CustomerDTO();
         customer.setFirstName("Mitko");
-        customer.setFirstName("Pavlov");
+        customer.setLastName("Pavlov");
         customer.setCustomerUrl("/api/v1/customer/1");
 
         when(this.customerService.getCustomerById(anyLong())).thenReturn(customer);

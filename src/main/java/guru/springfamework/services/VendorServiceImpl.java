@@ -1,6 +1,7 @@
 package guru.springfamework.services;
 
 import guru.springfamework.api.v1.model.VendorDTO;
+import guru.springfamework.api.v1.model.exceptions.ResourceNotFoundException;
 import guru.springfamework.controllers.v1.VendorController;
 import guru.springfamework.domain.Vendor;
 import guru.springfamework.repositories.VendorRepository;

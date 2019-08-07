@@ -1,6 +1,7 @@
 package guru.springfamework.services;
 
 import guru.springfamework.api.v1.model.CustomerDTO;
+import guru.springfamework.api.v1.model.exceptions.ResourceNotFoundException;
 import guru.springfamework.api.v1.model.mapper.CustomerMapper;
 import guru.springfamework.domain.Customer;
 import guru.springfamework.repositories.CustomerRepository;

@@ -1,6 +1,5 @@
-package guru.springfamework.controllers.v1;
+package guru.springfamework.api.v1.model.exceptions;
 
-import guru.springfamework.services.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -16,7 +15,5 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
 
         return new ResponseEntity<>("Resource Not Found", HttpStatus.NOT_FOUND);
 
-
     }
-
 }
